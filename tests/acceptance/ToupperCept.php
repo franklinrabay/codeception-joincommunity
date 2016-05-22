@@ -1,0 +1,25 @@
+<?php 
+$I = new WebGuy($scenario);
+$I->wantTo('Certificar que o botão se chama Converter');
+$I->amOnPage('index.html');
+$I->wait(3);
+$I->see('Converter');
+$I->wait(3);
+$I->fillField('string', "join community");
+$I->wait(3);
+$I->click('Converter');
+$I->wait(3);
+$I->amOnPage('toupper.php');
+$I->wait(3);
+$I->see('Resultado');
+$I->wait(3);
+$I->click('Voltar');
+$I->wait(3);
+$I->see('Converter');
+$I->wait(3);
+$I->fillField('string', 'join community');
+$I->wait(3);
+$I->click('Converter');
+$I->wait(3);
+$I->see('JOIN COMMUNITY');
+$I->wait(3);
